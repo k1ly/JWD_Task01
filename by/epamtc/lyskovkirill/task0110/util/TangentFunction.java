@@ -1,17 +1,18 @@
 package by.epamtc.lyskovkirill.task0110.util;
 
-import by.epamtc.lyskovkirill.task0110.entity.Point;
+import by.epamtc.lyskovkirill.task01.entity.NegativeValueException;
+import by.epamtc.lyskovkirill.task0107.entity.SimplePoint;
 
 import java.util.ArrayList;
 
 public class TangentFunction {
 
-    public static ArrayList<Point> getFunctionValues(double a, double b, double h) throws Exception {
+    public static ArrayList<SimplePoint> getFunctionValues(double a, double b, double h) throws NegativeValueException {
         if ((a < b && h <= 0) || (a > b && h >= 0))
-            throw new Exception();
-        ArrayList<Point> table = new ArrayList<>();
+            throw new NegativeValueException("Ошибка: Конечное значение аргумента " + b + " не соответсвует напралению шага " + h);
+        ArrayList<SimplePoint> table = new ArrayList<>();
         for (double i = a; i < b; i += h) {
-            table.add(new Point(i, Math.tan(i)));
+            table.add(new SimplePoint(i, Math.tan(i)));
         }
         return table;
     }

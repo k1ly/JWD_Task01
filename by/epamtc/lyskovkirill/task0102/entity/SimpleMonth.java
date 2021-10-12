@@ -1,6 +1,6 @@
 package by.epamtc.lyskovkirill.task0102.entity;
 
-public enum Months {
+public enum SimpleMonth {
     JANUARY,
     FEBRUARY,
     MARCH,

@@ -1,8 +1,8 @@
 package by.epamtc.lyskovkirill.task0108.util;
 
-public class Function {
+public class CustomFunction {
 
-    public static double calculateValue(double x) {
+    public static double calculateFunctionValue(double x) {
         double y;
         if (x >= 3)
             y = -x * Math.pow(x, 2) + 3 * x + 9;
